@@ -1,0 +1,11 @@
+package CourseWork;
+
+public class Interfaces {
+	public interface contact{
+		int getID();
+		String getName();
+		String getNotes();
+		
+	}
+
+}
