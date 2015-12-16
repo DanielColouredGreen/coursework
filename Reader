@@ -1,0 +1,42 @@
+package CourseWork;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.*;
+public class Reader {
+	
+	public List<ContactImpl> readContactsList(){
+		List<ContactImpl> contactsList = new ArrayList<>();
+		BufferedReader br = null;
+		try{
+			String sCurrentLine;
+			br = new BufferedReader(new FileReader("C:\\Users\\CompUser\\Desktop\\xyz.txt"));
+			
+			while ((sCurrentLine = br.readLine()) != null){
+				String txtSplitBy = ",";
+				String[] contactData = sCurrentLine.split(txtSplitBy);
+				contactsList.add(new ContactImpl(Integer.parseInt(contactData[0]), contactData[1], contactData[2]));
+				contactData=null;
+			}
+		
+		
+				
+			
+			
+		}catch (IOException e){
+	e.printStackTrace();
+}
+		finally {
+			try{
+				if (br != null)br.close();
+			}catch (IOException ex){
+		ex.printStackTrace();
+			}
+		}
+		return contactsList;
+		
+	}
+}
+
+
+
