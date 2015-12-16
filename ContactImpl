@@ -1,0 +1,55 @@
+package CourseWork;
+import java.lang.*;
+import java.util.Set;
+//interface for contact below.
+interface contact{
+	int getId();
+	String getContactName();
+	String getNotes();
+}
+
+
+	
+
+	//interface implements.
+	
+		class ContactImpl implements contact{
+			private int id=0;
+			private String contactName;
+			private String notes;
+				//constructor below.
+			public ContactImpl(int myId, String myName, String myNotes){
+				id=myId;
+				contactName=myName;
+				notes=myNotes;
+			}
+			public int getId(){
+				return id;
+					
+					
+			}
+			public String getContactName(){
+				return contactName;
+					
+					
+					
+}
+			@Override
+			public String getNotes() {
+				return notes;
+			}
+				
+			
+		
+		
+		
+		
+	
+		
+		
+	
+
+	
+
+}
+
