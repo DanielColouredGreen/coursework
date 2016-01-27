@@ -1,0 +1,33 @@
+package CourseWork;
+import java.util.Scanner;
+public class ContactMain {
+	public static void main(String[] args){
+		String word;
+		String banana;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Would your like to: A) View All Contact Options? B) View all Meeting options?  Choose 'A' or 'B'");
+		word=sc.nextLine();
+		if(word.equals("a")||word.equals("A")){
+			Scanner sx=new Scanner(System.in);
+			System.out.println("Would you like to: A) View All Contacts? B) Add a Contact? C) Remove a Contact? D) Search for a Specific Contact?");
+			banana=sx.nextLine();
+			
+			if(banana.equals("a")||banana.equals("A")){
+			
+			for(ContactImpl contactObject:new Reader().readContactsList()){
+				System.out.println(contactObject.getId() + " ** " + contactObject.getContactName() + " ** " + contactObject.getNotes());
+		}	
+		}
+			if(banana.equals("b")||banana.equals("B")){
+				for(ContactImpl contactObject:new Reader().readContactsList()){
+					
+				}
+	}
+		
+	}
+}
+}
+
+
+
+
