@@ -7,15 +7,21 @@ import java.util.*;
 //interface for contact below.
 public class ContactImpl{
 	
-	int id;
-	String name;
-	String notes;
+	
 	
 	public ContactImpl(int parseInt, String string, String string2) {
 	
 	}
 
-	public void addContact(String[] args){
+	public ContactImpl() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) throws IOException{
+		String uniqueID = UUID.randomUUID().toString();
+		String name;
+		String notes;
+		int id;
 		
 		Scanner nme = new Scanner(System.in);
 		System.out.println("Enter new contact's name.");
@@ -27,9 +33,10 @@ public class ContactImpl{
 		
 		File file = new File("C:\\Users\\CompUser\\Desktop\\xyz.txt");
 		
-		FileWriter fw = new FileWriter(file.getAbsoluteFile());
+		FileWriter fw = new FileWriter(file.getAbsoluteFile(),true);
 		BufferedWriter bw = new BufferedWriter(fw);
-		bw.write(name+","+" " + notes);
+		bw.newLine();
+		bw.write(uniqueID+","+" "+name+","+" " + notes);
 		bw.close();
 		
 		System.out.println("Done");
