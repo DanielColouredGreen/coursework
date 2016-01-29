@@ -1,9 +1,17 @@
 package CourseWork;
+import java.io.PrintStream;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
+
 public class ContactMain {
 	public static void main(String[] args){
 		String word;
-		String banana;
+		String banana = null;
+		Reader reader = new Reader();
+		List<ContactImpl> contactsList = new ArrayList<>();
+		ContactImpl contactimpl = new ContactImpl();
+		
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Would your like to: A) View All Contact Options? B) View all Meeting options?  Choose 'A' or 'B'");
 		word=sc.nextLine();
@@ -14,19 +22,22 @@ public class ContactMain {
 			
 			if(banana.equals("a")||banana.equals("A")){
 			
-			for(ContactImpl contactObject:new Reader().readContactsList()){
-				System.out.println(contactObject.getId() + " ** " + contactObject.getContactName() + " ** " + contactObject.getNotes());
+				contactsList = reader.readContactsList();
+				
 		}	
 		}
 			if(banana.equals("b")||banana.equals("B")){
-				for(ContactImpl contactObject:new Reader().readContactsList()){
+				
+				
 					
 				}
 	}
 		
 	}
-}
-}
+
+
+
+
 
 
 
