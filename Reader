@@ -18,9 +18,7 @@ public class Reader {
 				contactsList.add(new ContactImpl(Integer.parseInt(contactData[0]), contactData[1], contactData[2]));
 				contactData=null;
 			}
-		
-		
-				
+			
 			
 			
 		}catch (IOException e){
